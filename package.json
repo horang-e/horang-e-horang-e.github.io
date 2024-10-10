@@ -1,13 +1,13 @@
 {
   "name": "my-app",
-  "homepage": "https://horang-e.github.io/portfolio",
+  "homepage": "https://horang-e.github.io/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "predeploy": "npm run build",
-    "deploy": "next build && touch out/.nojekyll && git add -f out/ && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "deploy": "touch out/.nojekyll && gh-pages -d out -t true",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,6 +21,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "postcss": "^8",
