@@ -9,7 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-
+  trailingSlash: true,
+  assetPrefix: !isProduction ? `/portfolio/` : "",
 };
 
 export default nextConfig;
